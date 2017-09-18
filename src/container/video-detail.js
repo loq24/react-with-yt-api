@@ -6,9 +6,8 @@ import {bindActionCreators} from 'redux';
 class VideoDetail extends Component{
 	
 	render(){
-		const videos = this.props.videos;
-		const video = this.props.videos[0];
-		const selectedVideo = this.props.selectedVideo;
+		const { videos, selectedVideo } = this.props;
+		const video = videos[0];
 		if(!video){
 			return <div>Loading...</div>;
 		}
